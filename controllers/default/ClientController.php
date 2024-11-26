@@ -32,10 +32,9 @@ class ClientController extends Controller
 		require_once 'models/default/productModel.php';
 		$md = new productModel;
 		$data = array();
-		
+
 		$title = "Sản phẩm của bạn:";
 		$data = $md->getPrdById($masp);
-
 		$this->render('buynow', $data ,$title);
 	}
 	function addtocart(){
@@ -80,6 +79,7 @@ class ClientController extends Controller
 		echo " ".count($_SESSION['cart']);
 	}
 	function order(){
+
 		require_once 'vendor/Model.php';
 		require_once 'models/default/productModel.php';
 		$md = new productModel;
@@ -87,7 +87,7 @@ class ClientController extends Controller
 		$num = 0;
 		if(isset($_GET['num'])){$num = $_GET['num'];$_SESSION['num'] = $num;}
 		$title = 0;
-		
+
 		if(isset($_SESSION['cart'])){
 			for($i = 0; $i < count($_SESSION['cart']); $i++){
 				$row = $md->getPrdById($_SESSION['cart'][$i]);
@@ -101,6 +101,7 @@ class ClientController extends Controller
 		$this->render('order', $data, $title);
 	}
 	function orderComplete(){
+
 		$ten = $sdt = $quan = $dc = $type = ""; $tt = 0;
 		$num = $sp = [];
 
@@ -122,7 +123,7 @@ class ClientController extends Controller
 			$tt += $num[$i]*intval(preg_replace('/\s+/', '', $row['gia']));
 		}
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
-		$sql = "INSERT INTO giaodich VALUES ('',0,'','".$ten."','".$quan."','".$dc."','".$sdt."','".$tt."','".$now."')";
+		$sql = "INSERT INTO giaodich VALUES (null,0,".$_SESSION['user']['id'].",'".$ten."','".$quan."','".$dc."','".$sdt."','".$tt."','".$now."')";
 		$rs = $md->exe_query($sql);
 		if($rs){
 			$last_id = $md->getLastInsertID();
