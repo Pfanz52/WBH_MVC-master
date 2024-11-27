@@ -16,7 +16,7 @@ class IndexAdminController extends Controller
 	}
 	function dashboard(){
 		if(!isset($_SESSION['admin'])){
-			header("Location: http://localhost:8888/WBH_MVC-master/indexadmin");
+			header("Location: http://localhost/WBH_MVC-master/indexadmin");
 		}
 		require_once 'vendor/Model.php';
 		require_once 'models/admin/orderModel.php';

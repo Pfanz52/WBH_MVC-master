@@ -113,7 +113,7 @@ class ClientController extends Controller
 		if(isset($_POST['num'])){$num = $_POST['num'];}
 		if(isset($_POST['type'])){$type = $_POST['type'];}
 		/*$now = date("Y-m-d h:i:s");*/
-		$now = new DateTime(null, new DateTimeZone('ASIA/Ho_Chi_Minh'));
+		$now = new DateTime(NULL, new DateTimeZone('ASIA/Ho_Chi_Minh'));
 		$now = $now->format('Y-m-d H:i:s');
 		require_once 'vendor/Model.php';
 		require_once 'models/default/productModel.php';
@@ -165,8 +165,8 @@ class ClientController extends Controller
 			case 'all':
 			$data_tmp = $md->getPrds('gia',$st,8);
 			break;
-			$data_tmp = $md->getPrds('gia',$st,8,'madm = 6');
-			break;
+			// $data_tmp = $md->getPrds('gia',$st, 8,'madm = 6');
+			// break;
 			case 'search':
 			$data_tmp = $md->getPrds('gia',$st,8,"tensp like '%".$q."%'");
 			break;

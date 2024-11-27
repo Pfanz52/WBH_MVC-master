@@ -7,7 +7,7 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 <head>
 	<title> 9XWatch - Thể hiện sự lịch lãm của phái mạnh! </title>
 	<meta charset="utf-8">
-	<base href="/WBH_MVC-master/">
+	<base href="\webMau\WBH_MVC-master\">
 	<!-- <link rel="SHORTCUT ICON"  href=> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="public/css/style.css">
