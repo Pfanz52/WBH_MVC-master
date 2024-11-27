@@ -10,7 +10,7 @@ class Model
 	function __construct()
 	{
 		try {
-			$this->conn = new PDO("mysql:host=localhost:8889;dbname=".DB_NAME.";charset=UTF8;SET time_zone = 'Asia/Ho_Chi_Minh'", "root","root");
+			$this->conn = new PDO("mysql:host=localhost;dbname=".DB_NAME.";charset=UTF8;SET time_zone = 'Asia/Ho_Chi_Minh'", "root","");
     		// set the PDO error mode to exception
 			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}

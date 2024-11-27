@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 17, 2017 at 03:09 PM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.2
+-- Host: localhost:8889
+-- Generation Time: Nov 26, 2024 at 12:44 PM
+-- Server version: 5.7.34
+-- PHP Version: 8.0.8
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `qlbh`
+-- Database: `QLBH001`
 --
 
 -- --------------------------------------------------------
@@ -31,6 +33,15 @@ CREATE TABLE `chitietgd` (
   `masp` int(11) NOT NULL,
   `soluong` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `chitietgd`
+--
+
+INSERT INTO `chitietgd` (`magd`, `masp`, `soluong`) VALUES
+(1, 8, 1),
+(2, 8, 1),
+(3, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -73,6 +84,15 @@ CREATE TABLE `giaodich` (
   `tongtien` varchar(20) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `giaodich`
+--
+
+INSERT INTO `giaodich` (`magd`, `tinhtrang`, `user_id`, `user_name`, `user_dst`, `user_addr`, `user_phone`, `tongtien`, `date`) VALUES
+(1, 0, 11, 'dfgdfgdf', 'q1', 'dgdfgdf', '', '380000', '2024-11-26 12:28:17'),
+(2, 0, 11, 'dfgdfgdf', 'q1', '3433', '', '380000', '2024-11-26 12:32:39'),
+(3, 0, 11, 'dfgdfgfd', 'q1', 'dfgdfgdf', '', '380000', '2024-11-26 12:34:29');
 
 -- --------------------------------------------------------
 
@@ -206,12 +226,13 @@ INSERT INTO `thanhvien` (`id`, `ten`, `tentaikhoan`, `matkhau`, `diachi`, `sodt`
 (1, 'Thằng tester', 'tester', '123', 'No info', 'Không cho', 'ccne@cc.cc', '2017-10-30 20:50:48', 0),
 (2, 'Admin bá đạo', 'admin', '123', 'sao biết dc', '1234566', 'adf@afd.com', '2017-11-04 14:40:53', 1),
 (3, 'change1', 'tester2', '123', '123', 'sdt1', 'asf@a.oads', '2017-11-04 11:59:21', 0),
-(4, 'test''s %/\\', 'tester3', '123', '123', '12', 'adf@afd.com', '0000-00-00 00:00:00', 0),
+(4, 'test\'s %/\\', 'tester3', '123', '123', '12', 'adf@afd.com', '0000-00-00 00:00:00', 0),
 (5, 'Lê A', 'tester4', '123', '10', '0935714733', 'nvduong15@gmail.com', '0000-00-00 00:00:00', 0),
 (6, 'Lê A', 'tester5', '123', '10', '0935714733', 'nvduong15@gmail.com', '0000-00-00 00:00:00', 0),
 (7, 'David Villa', 'tester6', '123', 'Anabella', '0935777888', 'adf@afd.com', '2017-10-31 06:46:17', 0),
 (8, 'Lê A', 'tester7', '123', '10', '0935714733', 'nvduong15@gmail.com', '2017-11-01 12:47:55', 0),
-(9, 'tester11', 'tester11', 'tester11', 'tester11', 'tester11', 'tester11', '2017-12-12 06:46:13', 0);
+(9, 'tester11', 'tester11', 'tester11', 'tester11', 'tester11', 'tester11', '2017-12-12 06:46:13', 0),
+(11, 'cuong', 'cuong', '123456', 'ha noi', '09123122342', 'cuong@gmail.com', '2024-11-26 18:56:54', 0);
 
 --
 -- Indexes for dumped tables
@@ -270,21 +291,25 @@ ALTER TABLE `thanhvien`
 --
 ALTER TABLE `danhmucsp`
   MODIFY `madm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `giaodich`
 --
 ALTER TABLE `giaodich`
-  MODIFY `magd` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `magd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `masp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
 --
 -- AUTO_INCREMENT for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- Constraints for dumped tables
 --
@@ -301,6 +326,8 @@ ALTER TABLE `giohang`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `fk_sp_dmsp` FOREIGN KEY (`madm`) REFERENCES `danhmucsp` (`madm`);
+SET FOREIGN_KEY_CHECKS=1;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
