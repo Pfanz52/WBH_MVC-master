@@ -247,7 +247,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         data : {
         },
         success : function (result){
-          location.replace('http://localhost:8888/WBH_MVC-master/indexadmin');
+          location.replace('https://localhost:8012/WBH_MVC-master/indexadmin');
         }
       });
     }

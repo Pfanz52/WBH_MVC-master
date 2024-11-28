@@ -10,7 +10,7 @@ class MemberController extends Controller
 	{
 		$this->folder = "admin";
 		if(!isset($_SESSION['admin'])){
-			header("Location: http://localhost:8888/WBH_MVC-master/indexadmin");
+			header("Location: https://localhost:8012/WBH_MVC-master/indexadmin");
 		}
 	}
 	function index(){

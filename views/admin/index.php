@@ -49,7 +49,7 @@
 				},
 				success : function (result){
 					if(result == "LoginSuccess"){
-						location.replace('http://localhost:8888/WBH_MVC-master/indexadmin/dashboard');
+						location.replace('https://localhost:8012/WBH_MVC-master/indexadmin/dashboard');
 					}
 					$('#err').html(result);
 				}

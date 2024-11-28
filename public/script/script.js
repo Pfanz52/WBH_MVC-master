@@ -70,7 +70,7 @@ function login(){
     success : function (result){
       if(result == 'LoginSuccess'){
         /*$('.errorMes').html(result);*/
-        window.location.replace("http://localhost:8888/WBH_MVC-master/");
+        window.location.replace("http://localhost:8012/WBH_MVC-master/");
       } else {
         $('.errorMes')[0].style.display = "block";
         $('.errorMes').html(result);
@@ -96,7 +96,7 @@ function register(){
    success : function (result){
     if(result == 'RegisterSuccess'){
       alert('Tạo tài khoản thành công!');
-      window.location.replace("http://localhost:8888/WBH_MVC-master/");
+      window.location.replace("https://localhost:8012/WBH_MVC-master/");
     } else{
       $('.errorMes')[0].style.display = "block";
       $('.errorMes').html(result);
