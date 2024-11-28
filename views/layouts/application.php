@@ -5,7 +5,7 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 ?>
 <html lang="en">
 <head>
-	<title> 9XWatch - Thể hiện sự lịch lãm của phái mạnh! </title>
+	<title> LinhKienHP - ! </title>
 	<meta charset="utf-8">
 	<base href="\webMau\WBH_MVC-master\">
 	<!-- <link rel="SHORTCUT ICON"  href=> -->
@@ -26,7 +26,7 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 </head>
 <body>
 	<header id='header'>
-		<a href=""><img src="public/images/logo.png"><h2 class="logo">9XWatch</h2></a>
+		<a href=""><img src="public/images/logo.png"><h2 class="logo">LinhKienHP</h2></a>
 		<ul class="header-menu">
 			<?php
 			if((!isset($_SESSION['user']))){ ?>
@@ -47,8 +47,8 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 			<li><a href="client/viewcart"><i class="glyphicon glyphicon-shopping-cart"></i> Giỏ hàng</a><div class="mn-ef"></div></li>
 		</ul>
 		<div class="header-detail">
-			<p>113 Hoàng Sa, Đa Kao, Tân Bình, Hồ Chí Minh, Việt Nam<br>
-				<i>8h - 22h Hằng ngày, kể cả Ngày lễ và Chủ nhật</i>
+			<p>218, Lĩnh Lam, Hoàng Mai, Hà Nội, Việt Nam<br>
+				<i>8h - 20h30 Hằng ngày, Chủ nhật làm việc từ 14h30 - 20h30</i>
 			</p>
 		</div>
 	</header>
@@ -63,7 +63,7 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand logo" href="">9XWatch</a>
+				<a class="navbar-brand logo" href="">LinhKienHP</a>
 				<div id="custom-search-input">
 					<div class="input-group col-md-12" style="background-color: white;">
 						<input type="text" class="form-control input-lg" placeholder="Bạn tìm gì?" id='src-v' />
@@ -137,9 +137,9 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 				</div>
 				<div class="col-lg-4" id="contact">
 					<h3>Contact</h3>
-					<i class="glyphicon glyphicon-map-marker"></i><span> Linh Trung, Thủ Đức, tp.HCM</span><br>
-					<i class="glyphicon glyphicon-earphone"></i><span> (08) 391 525</span><br>
-					<i class="glyphicon glyphicon-envelope"></i><span> 9XWatch@gmail.com</span><br>
+					<i class="glyphicon glyphicon-map-marker"></i><span> Lĩnh Lam, Hoàng Mai, Hà Nội</span><br>
+					<i class="glyphicon glyphicon-earphone"></i><span> (08) 365956252</span><br>
+					<i class="glyphicon glyphicon-envelope"></i><span> LinhKienHP@gmail.com</span><br>
 					<h4 style="line-height: 26px">Nhận email thông báo của chúng tôi khi có sản phẩm mới hay giảm giá:</h4>
 					<form action="" method="POST" class="form-inline" role="form">
 						<div class="form-group">
@@ -150,7 +150,7 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 					</form>
 				</div>
 				<div class="col-lg-12" id="copyright-txt">
-					<b>All right reverse, &#169; copyright of 9XWatch.com</b>
+					<b>All right reverse, &#169; copyright of LinhKienHP.com</b>
 				</div>
 			</div>
 		</div>
