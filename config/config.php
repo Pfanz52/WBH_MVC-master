@@ -1,5 +1,5 @@
 <?php 
-DEFINE('INDEX_URL','http://localhost/webMau/WBH_MVC-master/');
+DEFINE('INDEX_URL','http://localhost:8022/webMau/WBH_MVC-master/');
 
 DEFINE('DB_HOST','localhost');
 DEFINE('DB_USERNAME','root');
